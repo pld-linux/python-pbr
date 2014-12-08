@@ -1,5 +1,6 @@
 #
 # Conditional build:
+%bcond_without	doc		# don't build doc
 %bcond_with	tests	# tests are failing currently
 %bcond_without	python2 # CPython 2.x module
 %bcond_with	python3 # CPython 3.x module
@@ -16,6 +17,9 @@ Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}
 URL:		http://pypi.python.org/pypi/pbr
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	rpm-pythonprov
+%if %{with doc}
+BuildRequires:	sphinx-pdg
+%endif
 %if %{with python2}
 # very new required, when also using tests
 BuildRequires:	python-Sphinx >= 1.1.3
