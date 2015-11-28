@@ -9,7 +9,7 @@
 Summary:	Python Build Reasonableness
 Name:		python-%{module}
 Version:	0.10.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
