@@ -15,7 +15,7 @@ Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	9e02dbfb5e49210c381fd4eea00cf7b7
 URL:		http://pypi.python.org/pypi/pbr
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	rpm-pythonprov
 %if %{with doc}
 BuildRequires:	sphinx-pdg
