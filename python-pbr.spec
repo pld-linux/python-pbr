@@ -61,7 +61,6 @@ BuildRequires:	python3-testtools >= 1.4.0
 BuildRequires:	python3-virtualenv
 %endif
 %endif
-Requires:	python-pip
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -85,7 +84,6 @@ wydzielenie kodu do biblioteki.
 Summary:	Python Build Reasonableness
 Summary(pl.UTF-8):	Python Build Reasonableness - rozsądne budowanie modułów pythonowych
 Group:		Libraries/Python
-Requires:	python3-pip
 
 %description -n python3-pbr
 PBR is a library that injects some useful and sensible default
