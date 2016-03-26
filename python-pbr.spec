@@ -1,10 +1,14 @@
 #
 # Conditional build:
-%bcond_without	doc	# Sphinx documentation
-%bcond_with	tests	# tests are failing currently
-%bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_without	doc		# Sphinx documentation
+%bcond_without	tests		# test target
+%bcond_with	bootstrap	# disable tests for bootstrap (circular build dependencies)
+%bcond_without	python2	 	# CPython 2.x module
+%bcond_without	python3		# CPython 3.x module
 
+%if %{with bootstrap}
+%undefine	with_tests
+%endif
 %define 	module	pbr
 Summary:	Python Build Reasonableness
 Summary(pl.UTF-8):	Python Build Reasonableness - rozsądne budowanie modułów pythonowych
@@ -39,26 +43,21 @@ BuildRequires:	python-subunit >= 0.0.18
 BuildRequires:	python-testrepository >= 0.0.18
 BuildRequires:	python-testresources >= 0.2.4
 BuildRequires:	python-testscenarios >= 0.4
-BuildRequires:	python-testtools >= 1.4.0
-BuildRequires:	python-virtualenv
+BuildRequires:	python-testtools >= 1.1.0
 %endif
 %endif
 %if %{with python3}
 BuildRequires:	python3-devel >= 1:3.3
 %if %{with tests}
-BuildRequires:	python3-coverage >= 3.6
-BuildRequires:	python3-discover
 BuildRequires:	python3-fixtures >= 1.3.1
 BuildRequires:	python3-hacking >= 0.10.0
 BuildRequires:	python3-hacking < 0.11
-BuildRequires:	python3-mock >= 1.2
 BuildRequires:	python3-six >= 1.9.0
 BuildRequires:	python3-subunit >= 0.0.18
 BuildRequires:	python3-testrepository >= 0.0.18
 BuildRequires:	python3-testresources >= 0.2.4
 BuildRequires:	python3-testscenarios >= 0.4
-BuildRequires:	python3-testtools >= 1.4.0
-BuildRequires:	python3-virtualenv
+BuildRequires:	python3-testtools >= 1.1.0
 %endif
 %endif
 BuildArch:	noarch
@@ -114,10 +113,14 @@ wydzielenie kodu do biblioteki.
 %build
 %if %{with python2}
 %py_build %{?with_tests:test}
+
+%{?with_tests:%{__rm} -r .testrepository}
 %endif
 
 %if %{with python3}
 %py3_build %{?with_tests:test}
+
+%{?with_tests:%{__rm} -r .testrepository}
 %endif
 
 %if %{with doc}
@@ -141,7 +144,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__mv} $RPM_BUILD_ROOT%{_bindir}/pbr{,-3}
 %endif
 
+%if %{with python2}
 ln -sf pbr-2 $RPM_BUILD_ROOT%{_bindir}/pbr
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
