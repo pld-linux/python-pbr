@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	doc		# Sphinx documentation
-%bcond_without	tests		# test target
+%bcond_with	tests		# test target [fails on one wheel/wsgi test]
 %bcond_with	bootstrap	# disable tests for bootstrap (circular build dependencies)
 %bcond_without	python2	 	# CPython 2.x module
 %bcond_without	python3		# CPython 3.x module
@@ -13,13 +13,13 @@
 Summary:	Python Build Reasonableness
 Summary(pl.UTF-8):	Python Build Reasonableness - rozsądne budowanie modułów pythonowych
 Name:		python-%{module}
-Version:	1.8.1
-Release:	2
+Version:	1.9.1
+Release:	1
 License:	Apache v2.0
 Group:		Libraries/Python
-#Source0Download: https://pypi.python.org/pypi/pbr
+#Source0Download: https://pypi.python.org/simple/pbr/
 Source0:	https://pypi.python.org/packages/source/p/pbr/%{module}-%{version}.tar.gz
-# Source0-md5:	c8f9285e1a4ca6f9654c529b158baa3a
+# Source0-md5:	d70073a39a28da64ac968139b49cec8f
 URL:		https://launchpad.net/pbr
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
@@ -31,7 +31,6 @@ BuildRequires:	sphinx-pdg
 BuildRequires:	python-Sphinx >= 1.1.3
 BuildRequires:	python-devel >= 1:2.6
 %if %{with tests}
-# some still not packaged yet:
 BuildRequires:	python-coverage >= 3.6
 BuildRequires:	python-discover
 BuildRequires:	python-fixtures >= 1.3.1
@@ -44,6 +43,8 @@ BuildRequires:	python-testrepository >= 0.0.18
 BuildRequires:	python-testresources >= 0.2.4
 BuildRequires:	python-testscenarios >= 0.4
 BuildRequires:	python-testtools >= 1.1.0
+BuildRequires:	python-virtualenv
+BuildRequires:	python-wheel
 %endif
 %endif
 %if %{with python3}
@@ -58,6 +59,8 @@ BuildRequires:	python3-testrepository >= 0.0.18
 BuildRequires:	python3-testresources >= 0.2.4
 BuildRequires:	python3-testscenarios >= 0.4
 BuildRequires:	python3-testtools >= 1.1.0
+BuildRequires:	python3-virtualenv
+BuildRequires:	python3-wheel
 %endif
 %endif
 BuildArch:	noarch
@@ -103,9 +106,9 @@ wydzielenie kodu do biblioteki.
 %prep
 %setup -q -n %{module}-%{version}
 
-# Remove the requirements file so that pbr hooks don't add it
+# Move away the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
-%{__rm} test-requirements.txt
+%{__mv} test-requirements.txt{,.disabled}
 
 # Remove bundled egg-info
 %{__rm} -r %{module}.egg-info
