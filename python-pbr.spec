@@ -14,7 +14,7 @@ Summary:	Python Build Reasonableness
 Summary(pl.UTF-8):	Python Build Reasonableness - rozsądne budowanie modułów pythonowych
 Name:		python-%{module}
 Version:	3.1.1
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.python.org/simple/pbr/
