@@ -13,13 +13,13 @@
 Summary:	Python Build Reasonableness
 Summary(pl.UTF-8):	Python Build Reasonableness - rozsądne budowanie modułów pythonowych
 Name:		python-%{module}
-Version:	3.1.1
-Release:	2
+Version:	4.0.4
+Release:	1
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.python.org/simple/pbr/
-Source0:	https://pypi.python.org/packages/d5/d6/f2bf137d71e4f213b575faa9eb426a8775732432edb67588a8ee836ecb80/pbr-3.1.1.tar.gz
-# Source0-md5:	4e82c2e07af544c56a5b71c801525b00
+Source0:	https://pypi.debian.net/pbr/pbr-%{version}.tar.gz
+# Source0-md5:	000aac4d2bae0d8a9bc53b08634797c5
 URL:		https://launchpad.net/pbr
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
