@@ -8,6 +8,7 @@
 
 %if %{with bootstrap}
 %undefine	with_tests
+%undefine	with_doc
 %endif
 %define 	module	pbr
 Summary:	Python Build Reasonableness
@@ -17,51 +18,52 @@ Version:	4.0.4
 Release:	1
 License:	Apache v2.0
 Group:		Libraries/Python
-#Source0Download: https://pypi.python.org/simple/pbr/
-Source0:	https://pypi.debian.net/pbr/pbr-%{version}.tar.gz
+#Source0Download: https://pypi.org/simple/pbr/
+Source0:	https://files.pythonhosted.org/packages/source/p/pbr/%{module}-%{version}.tar.gz
 # Source0-md5:	000aac4d2bae0d8a9bc53b08634797c5
 URL:		https://launchpad.net/pbr
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
-%if %{with doc}
-BuildRequires:	sphinx-pdg
-%endif
 %if %{with python2}
-# very new required, when also using tests
-BuildRequires:	python-Sphinx >= 1.1.3
-BuildRequires:	python-devel >= 1:2.6
+BuildRequires:	python-devel >= 1:2.7
 %if %{with tests}
-BuildRequires:	python-coverage >= 3.6
-BuildRequires:	python-discover
-BuildRequires:	python-fixtures >= 1.3.1
-BuildRequires:	python-hacking >= 0.10.0
-BuildRequires:	python-hacking < 0.11
-BuildRequires:	python-mock >= 1.2
-BuildRequires:	python-six >= 1.9.0
-BuildRequires:	python-subunit >= 0.0.18
+BuildRequires:	python-coverage >= 4.0
+BuildRequires:	python-fixtures >= 3.0.0
+BuildRequires:	python-hacking >= 0.12.0
+BuildRequires:	python-hacking < 0.14
+BuildRequires:	python-mock >= 2.0
+BuildRequires:	python-reno >= 2.5.0
+BuildRequires:	python-six >= 1.10.0
+BuildRequires:	python-subunit >= 1.0.0
 BuildRequires:	python-testrepository >= 0.0.18
-BuildRequires:	python-testresources >= 0.2.4
+BuildRequires:	python-testresources >= 2.0.0
 BuildRequires:	python-testscenarios >= 0.4
-BuildRequires:	python-testtools >= 1.1.0
-BuildRequires:	python-virtualenv
+BuildRequires:	python-testtools >= 2.2.0
+BuildRequires:	python-virtualenv >= 14.0.6
 BuildRequires:	python-wheel
 %endif
 %endif
 %if %{with python3}
 BuildRequires:	python3-devel >= 1:3.3
 %if %{with tests}
-BuildRequires:	python3-fixtures >= 1.3.1
-BuildRequires:	python3-hacking >= 0.10.0
-BuildRequires:	python3-hacking < 0.11
-BuildRequires:	python3-six >= 1.9.0
-BuildRequires:	python3-subunit >= 0.0.18
+BuildRequires:	python3-coverage >= 4.0
+BuildRequires:	python3-fixtures >= 3.0.0
+BuildRequires:	python3-hacking >= 0.12.0
+BuildRequires:	python3-hacking < 0.14
+BuildRequires:	python3-reno >= 2.5.0
+BuildRequires:	python3-six >= 1.10.0
+BuildRequires:	python3-subunit >= 1.0.0
 BuildRequires:	python3-testrepository >= 0.0.18
-BuildRequires:	python3-testresources >= 0.2.4
+BuildRequires:	python3-testresources >= 2.0.0
 BuildRequires:	python3-testscenarios >= 0.4
-BuildRequires:	python3-testtools >= 1.1.0
-BuildRequires:	python3-virtualenv
+BuildRequires:	python3-testtools >= 2.2.0
+BuildRequires:	python3-virtualenv >= 14.0.6
 BuildRequires:	python3-wheel
 %endif
+%endif
+%if %{with doc}
+BuildRequires:	python3-openstackdocstheme >= 1.18.1
+BuildRequires:	sphinx-pdg-3 >= 1.6.2
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -128,13 +130,14 @@ wydzielenie kodu do biblioteki.
 
 %if %{with doc}
 # generate html docs
-sphinx-build doc/source html
+sphinx-build-3 doc/source html
 # remove the sphinx-build leftovers
 %{__rm} -r html/{_sources,.doctrees,.buildinfo}
 %endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %if %{with python2}
 %py_install
 
