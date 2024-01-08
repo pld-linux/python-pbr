@@ -180,6 +180,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog LICENSE README.rst
+%attr(755,root,root) %{_bindir}/pbr
 %attr(755,root,root) %{_bindir}/pbr-2
 %{py_sitescriptdir}/%{module}-%{version}-py*.egg-info
 %{py_sitescriptdir}/%{module}
@@ -189,7 +190,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -n python3-pbr
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog LICENSE README.rst
-%attr(755,root,root) %{_bindir}/pbr
 %attr(755,root,root) %{_bindir}/pbr-3
 %{py3_sitescriptdir}/%{module}-%{version}-py*.egg-info
 %{py3_sitescriptdir}/%{module}
