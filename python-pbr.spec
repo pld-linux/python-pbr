@@ -14,24 +14,30 @@
 Summary:	Python Build Reasonableness
 Summary(pl.UTF-8):	Python Build Reasonableness - rozsądne budowanie modułów pythonowych
 Name:		python-%{module}
-Version:	6.0.0
-Release:	4
+Version:	7.0.2
+Release:	1
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pbr/
 Source0:	https://files.pythonhosted.org/packages/source/p/pbr/%{module}-%{version}.tar.gz
-# Source0-md5:	e01bcc0e9154d513ecad3e766f9582d7
+# Source0-md5:	3a9dab2dec4e80761cb2b57810dbd59c
+# git clone https://github.com/openstack/pbr
+# cd pbr
+# git checkout %{version}
+# reno-3 cache  # makes releasenotes/notes/reno.cache
+Source1:	pbr-reno.cache
 URL:		https://launchpad.net/pbr
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.7
+BuildRequires:	python-setuptools
 %if %{with tests}
 BuildRequires:	python-coverage >= 4.0
 BuildRequires:	python-fixtures >= 3.0.0
 BuildRequires:	python-mock >= 2.0.0
+BuildRequires:	python-packaging >= 20.0
 BuildRequires:	python-reno >= 2.5.0
-BuildRequires:	python-six >= 1.12.0
 BuildRequires:	python-stestr >= 2.1.0
 BuildRequires:	python-testrepository >= 0.0.18
 BuildRequires:	python-testresources >= 2.0.0
@@ -43,15 +49,11 @@ BuildRequires:	python-wheel >= 0.32.0
 %endif
 %if %{with python3}
 BuildRequires:	python3-devel >= 1:3.5
+BuildRequires:	python3-setuptools
 %if %{with tests}
 BuildRequires:	python3-coverage >= 4.0
 BuildRequires:	python3-fixtures >= 3.0.0
-%if "%{py3_ver}" >= "3.6"
-BuildRequires:	python3-hacking >= 1.1.0
-BuildRequires:	python3-hacking < 4.0.0
-%endif
 BuildRequires:	python3-reno >= 2.5.0
-BuildRequires:	python3-six >= 1.12.0
 BuildRequires:	python3-stestr >= 2.1.0
 BuildRequires:	python3-testrepository >= 0.0.18
 BuildRequires:	python3-testresources >= 2.0.0
@@ -66,7 +68,7 @@ BuildRequires:	python3-openstackdocstheme >= 1.18.1
 BuildRequires:	python3-reno >= 2.5.0
 BuildRequires:	python3-six >= 1.12.0
 BuildRequires:	python3-sphinxcontrib-apidoc >= 0.2.0
-BuildRequires:	sphinx-pdg-3 >= 1.6.2
+BuildRequires:	sphinx-pdg-3 >= 8.2.0
 %endif
 Requires:	python-modules >= 1:2.7
 BuildArch:	noarch
@@ -93,7 +95,7 @@ Summary:	Python Build Reasonableness
 Summary(pl.UTF-8):	Python Build Reasonableness - rozsądne budowanie modułów pythonowych
 Group:		Libraries/Python
 Requires:	python3-modules >= 1:3.5
-Conflicts:	python-pbr < 5.8.1
+Conflicts:	python-pbr < 7
 
 %description -n python3-pbr
 PBR is a library that injects some useful and sensible default
@@ -127,6 +129,8 @@ jak i API).
 %prep
 %setup -q -n %{module}-%{version}
 
+cp -p %{SOURCE1} releasenotes/notes/reno.cache
+
 # Move away the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
 %{__mv} test-requirements.txt{,.disabled}
@@ -148,10 +152,7 @@ jak i API).
 %endif
 
 %if %{with doc}
-# generate html docs
-sphinx-build-3 doc/source html
-# remove the sphinx-build leftovers
-%{__rm} -r html/{_sources,.doctrees,.buildinfo}
+sphinx-build-3 -b html doc/source doc/_build/html
 %endif
 
 %install
@@ -167,10 +168,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 %py3_install
 %{__mv} $RPM_BUILD_ROOT%{_bindir}/pbr{,-3}
-%endif
-
-%if %{with python2}
-ln -sf pbr-2 $RPM_BUILD_ROOT%{_bindir}/pbr
+ln -sf pbr-3 $RPM_BUILD_ROOT%{_bindir}/pbr
 %endif
 
 %clean
@@ -180,7 +178,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog LICENSE README.rst
-%attr(755,root,root) %{_bindir}/pbr
 %attr(755,root,root) %{_bindir}/pbr-2
 %{py_sitescriptdir}/%{module}-%{version}-py*.egg-info
 %{py_sitescriptdir}/%{module}
@@ -191,6 +188,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog LICENSE README.rst
 %attr(755,root,root) %{_bindir}/pbr-3
+%{_bindir}/pbr
 %{py3_sitescriptdir}/%{module}-%{version}-py*.egg-info
 %{py3_sitescriptdir}/%{module}
 %endif
@@ -198,5 +196,5 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with doc}
 %files doc
 %defattr(644,root,root,755)
-%doc html/*
+%doc doc/_build/html/{_static,contributor,reference,user,*.html,*.js}
 %endif

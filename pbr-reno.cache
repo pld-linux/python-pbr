@@ -1,0 +1,586 @@
+---
+dates:
+- date: 1560484525
+  version: 5.3.0
+- date: 1660226264
+  version: 5.10.0
+- date: 1541454595
+  version: 5.1.1
+- date: 1431976900
+  version: 1.0.0
+- date: 1382925625
+  version: 0.5.22
+- date: 1755768921
+  version: 7.0.1
+- date: 1370552113
+  version: 0.5.12
+- date: 1364513833
+  version: 0.5.6
+- date: 1497890292
+  version: 3.1.0
+- date: 1637233155
+  version: 5.8.0
+- date: 1481711329
+  version: liberty-eol
+- date: 1344019687
+  version: 0.4.3
+- date: 1738679026
+  version: 6.1.1
+- date: 1342370698
+  version: '0.2'
+- date: 1528221708
+  version: 4.0.4
+- date: 1539725229
+  version: 5.0.0
+- date: 1363589541
+  version: 0.5.0
+- date: 1370625007
+  version: 0.5.13
+- date: 1400901123
+  version: 0.8.2
+- date: 1538559133
+  version: 4.3.0
+- date: 1761818087
+  version: 7.0.2
+- date: 1342620147
+  version: 0.3.2
+- date: 1586253749
+  version: 5.4.5
+- date: 1375641625
+  version: 0.5.21
+- date: 1548864197
+  version: 5.1.2
+- date: 1724764200
+  version: 6.1.0
+- date: 1370962969
+  version: 0.5.15
+- date: 1438631876
+  version: 1.4.0
+- date: 1433819617
+  version: 1.1.0
+- date: 1342649299
+  version: 0.4.1
+- date: 1342564005
+  version: 0.3.1
+- date: 1464031580
+  version: 1.10.0
+- date: 1369761524
+  version: 0.5.11
+- date: 1418784003
+  version: 0.10.3
+- date: 1419126036
+  version: 0.10.5
+- date: 1492703740
+  version: 3.0.0
+- date: 1374422564
+  version: 0.5.19
+- date: 1368032115
+  version: 0.5.9
+- date: 1404747706
+  version: 0.9.0
+- date: 1383166869
+  version: 0.5.23
+- date: 1432074993
+  version: 1.0.1
+- date: 1419225578
+  version: 0.10.7
+- date: 1532384228
+  version: 4.2.0
+- date: 1551376717
+  version: 5.1.3
+- date: 1441729231
+  version: 1.7.0
+- date: 1562235377
+  version: 5.4.0
+- date: 1651744249
+  version: 5.9.0
+- date: 1673431102
+  version: 5.11.1
+- date: 1418524259
+  version: 0.10.1
+- date: 1522753680
+  version: 4.0.1
+- date: 1522176308
+  version: 4.0.0
+- date: 1564997119
+  version: 5.4.2
+- date: 1405965916
+  version: 0.10.0
+- date: 1344027175
+  version: 0.4.4
+- date: 1418905163
+  version: 0.10.4
+- date: 1370654596
+  version: 0.5.14
+- date: 1567606629
+  version: 5.4.3
+- date: 1434927069
+  version: 1.2.0
+- date: 1523440051
+  version: 4.0.2
+- date: 1491899177
+  version: 2.1.0
+- date: 1460468263
+  version: 1.9.0
+- date: 1342642355
+  version: '0.4'
+- date: 1526357489
+  version: 4.0.3
+- date: 1619450153
+  version: 5.6.0
+- date: 1699381783
+  version: 6.0.0
+- date: 1375129393
+  version: 0.5.20
+- date: 1444254973
+  version: 1.8.1
+- date: 1559181236
+  version: 5.2.1
+- date: 1460627593
+  version: 1.9.1
+- date: 1433884099
+  version: 1.1.1
+- date: 1540329135
+  version: 5.1.0
+- date: 1430433115
+  version: 0.11.0
+- date: 1425321089
+  version: 0.10.8
+- date: 1395958051
+  version: 0.8.0
+- date: 1342544759
+  version: '0.3'
+- date: 1636017776
+  version: 5.7.0
+- date: 1395151616
+  version: 0.7.0
+- date: 1755076449
+  version: 7.0.0
+- date: 1348989243
+  version: 0.4.5
+- date: 1418527594
+  version: 0.10.2
+- date: 1532048677
+  version: 4.1.1
+- date: 1556297121
+  version: 5.2.0
+- date: 1439494276
+  version: 1.5.0
+- date: 1442262978
+  version: 1.8.0
+- date: 1644219626
+  version: 5.8.1
+- date: 1440451826
+  version: 1.6.0
+- date: 1371416119
+  version: 0.5.17
+- date: 1370966907
+  version: 0.5.16
+- date: 1603124470
+  version: 5.5.1
+- date: 1666263590
+  version: 5.11.0
+- date: 1738000402
+  version: 6.1.1.0b1
+- date: 1452547757
+  version: 0.11.1
+- date: 1467005819
+  version: kilo-eol
+- date: 1436563832
+  version: 1.3.0
+- date: 1495054547
+  version: 3.0.1
+- date: 1498037775
+  version: 3.1.1
+- date: 1342733952
+  version: 0.4.2
+- date: 1598989655
+  version: 5.5.0
+- date: 1368143284
+  version: 0.5.10
+- date: 1391461634
+  version: '0.6'
+- date: 1563417148
+  version: 5.4.1
+- date: 1561020591
+  version: 5.3.1
+- date: 1365543322
+  version: 0.5.8
+- date: 1365542567
+  version: 0.5.7
+- date: 1342121217
+  version: '0.1'
+- date: 1373398823
+  version: 0.5.18
+- date: 1400852905
+  version: 0.8.1
+- date: 1488339054
+  version: 2.0.0
+- date: 1530779086
+  version: 4.1.0
+- date: 1574701090
+  version: 5.4.4
+- date: 1419195383
+  version: 0.10.6
+file-contents:
+  releasenotes/notes/bdist_wininst-removal-4a1c7c3a9f08238d.yaml:
+    other:
+    - 'Support to generate bdist_wininst packages has been removed. As of Python
+
+      3.8 and Setuptools 47.2 it''s deprecated in favor of just using wheels for
+
+      Windows platform packaging. See
+
+      https://discuss.python.org/t/deprecate-bdist-wininst/ and
+
+      https://discuss.python.org/t/remove-distutils-bdist-wininst-command/ for
+
+      more details.
+
+      '
+  releasenotes/notes/build_sphinx_removal-de990a5c14a9e64d.yaml:
+    upgrade:
+    - 'The deprecated support for ``setup.py build_sphinx`` has been removed.
+
+      This feature has been deprecated since version 4.2. Setuptools and
+
+      sphinx have removed support for this command which breaks PBR''s ability
+
+      to integrate with those two tools to provide this functionality.
+
+      Users should switch to building sphinx docs with sphinx directly.
+
+      '
+  releasenotes/notes/cmd-e6664dcbd42d3935.yaml:
+    features:
+    - "Add an option to print only the version of a package\n\nExample:\n\n.. code-block::\
+      \ bash\n\n    $ pbr info -s pkgname\n    1.2.3\n"
+  releasenotes/notes/deprecate-pyN-requirements-364655c38fa5b780.yaml:
+    deprecations:
+    - 'Support for ``pyN``-suffixed requirement files has been deprecated:
+
+      environment markers should be used instead.
+
+      '
+  releasenotes/notes/deprecate-testr-nose-integration-56e3e11248d946fc.yaml:
+    deprecations:
+    - '*testr* and *nose* integration has been deprecated. This feature allowed
+
+      *pbr* to dynamically configure the test runner used when running
+
+      ``setup.py test``. However, this target has fallen out of favour in both
+
+      the OpenStack and broader Python ecosystem, and both *testr* and *nose*
+
+      offer native setuptools commands that can be manually aliased to ``test``
+
+      on a per-project basis, if necessary. This feature will be removed in a
+
+      future release.
+
+      '
+  releasenotes/notes/fix-global-replace-of-src-prefix-in-glob-eb850b94ca96993e.yaml:
+    fixes:
+    - 'Fixes a bug where the directory names of items specified in ``data_files``
+
+      could be renamed if the source prefix glob was contained within the
+
+      directory name. See `bug 1810804
+
+      <https://bugs.launchpad.net/pbr/+bug/1810804>`_ for details. For more
+
+      information on ``data_files``, see the `distutils documentation
+
+      <https://docs.python.org/2/distutils/setupscript.html#installing-additional-files>`_.
+
+      '
+  releasenotes/notes/fix-handling-of-spaces-in-data-files-glob-0fe0c398d70dfea8.yaml:
+    fixes:
+    - 'Fixes the handling of spaces in data_files globs. Please see `bug 1810934
+
+      <https://bugs.launchpad.net/pbr/+bug/1810934>`_ for more details.
+
+      '
+  releasenotes/notes/fix-keywords-as-cfg-list-6cadc5141429d7f5.yaml:
+    fixes:
+    - 'Fix error when ``keywords`` argument as a cfg list. Previously ``keywords``
+
+      were ``CSV_FIELDS`` and with these changes ``keywords`` are now
+
+      ``MULTI_FIELDS``. Refer to https://bugs.launchpad.net/pbr/+bug/1811475
+
+      for more information.
+
+      '
+  releasenotes/notes/fix-mapping-value-explode-with-equal-sign-41bf822fa4dd0e68.yaml:
+    fixes:
+    - 'Fix mapping error on values who contains a literal ``=``. Example when
+
+      setup.cfg contains content like the following project urls configuration
+
+      "project_urls = Documentation = http://foo.bar/?badge=latest".
+
+      https://bugs.launchpad.net/pbr/+bug/1817592
+
+      '
+  releasenotes/notes/fix-pep517-metadata-regression-bc287e60e45b2732.yaml:
+    fixes:
+    - 'Packages generated with the 5.8.0 release of PBR failed to incorporate
+
+      pbr.json metadata files. This is now corrected. Users can rebuild packages
+
+      with newer PBR if they want that missing metadata generated.
+
+      '
+  releasenotes/notes/fix-symbols-leading-spaces-f68928d75a8f0997.yaml:
+    fixes:
+    - 'Fix an issue where symbols that were indented
+
+      would produce an incorrect version.'
+  releasenotes/notes/global-compilers-removal-62b131e40de087ef.yaml:
+    upgrade:
+    - 'Support for the ``[global] compilers`` option has been removed. This was an
+
+      undocumented feature that did not appear to have any use.
+
+      '
+  releasenotes/notes/ignore-find-links-07cf54f465aa33a6.yaml:
+    fixes:
+    - 'PBR now ignores ``--find-links`` in requirements files. This option is not
+
+      a valid ``install_requires`` entry for setuptools and thus breaks
+
+      PBR-based installs.
+
+      '
+  releasenotes/notes/long-descr-content-type-f9a1003acbb8740f.yaml:
+    fixes:
+    - 'The ``description-content-type`` was not being set correctly.  It
+
+      will now be correctly populated when using ``setuptools`` 39.2.0
+
+      and beyond.
+
+      '
+  releasenotes/notes/pep517-support-89189ce0bab15845.yaml:
+    features:
+    - 'PBR now includes a PEP 517 build-backend and can be used in
+
+      pyproject.toml build-system configuration. Setuptools continues
+
+      to be the underlying mechanism with PBR acting as a driver via
+
+      PEP 517 entrypoints.
+
+      '
+  releasenotes/notes/remove-command-hooks-907d9c2325f306ca.yaml:
+    upgrade:
+    - 'Support for entry point command hooks has been removed. This feature was
+
+      poorly tested, poorly documented, and broken in some environments.
+
+      Support for global hooks is not affected.
+
+      '
+  releasenotes/notes/setuptools-alignment-b5b1309f47e9cf98.yaml:
+    deprecations:
+    - "A number of pbr-specific `setup.cfg` sections and options have been\ndeprecated\
+      \ in order in favour of setuptools native `setup.cfg` sections\nand options\
+      \ or their `pyproject.toml` equivalents:\n\n- The `[entry_points]` section has\
+      \ been deprecated in favour of the\n  `[options.entry_points]` section (if using\
+      \ `setup.cfg`) or the\n  `[project.scripts]` and/or `[project.entry-points.{name}]`\
+      \ sections\n  (if using `pyproject.toml`)\n\n- The `[files] packages_root` option\
+      \ has been deprecated in favour of the\n  `[options] package_dir` option (if\
+      \ using `setup.cfg`) or the\n  `[tools.setuptools] package_dir` option (if using\
+      \ `pyproject.toml`)\n\n- The `[files] packages` option has been deprecated in\
+      \ favour of the\n  `[options] packages` option (if using `setup.cfg`) or the\n\
+      \  `[tools.setuptools] packages` option (if using `pyproject.toml`)\n\n- The\
+      \ `[files] package_data` option has been deprecated in favour of the\n  `[options.package_data]`\
+      \ option (if using `setup.cfg`) or the\n  `[tool.setuptools.package-data]` option\
+      \ (if using `pyproject.toml`)\n\n- The `[files] namespace_packages` option has\
+      \ been deprecated in favour of\n  the `[options] namespace_packages` option\
+      \ (if using `setup.cfg`).\n  Alternatively, migrate to PEP 420-style namespace\
+      \ packages\n\n- The `[files] data_files` option has been deprecated, and support\
+      \ for\n  non-package data files in general is deprecated in setuptools and their\n\
+      \  use is discouraged. For package data files, use `[options] package_data`\n\
+      \  (if using `setup.cfg`) or `[tools.setuptools] package_data` (if using\n \
+      \ `pyproject.toml`) instead. If non-package data files are necessary, use\n\
+      \  `[options] data_files` (if using `setup.cfg`) or `[tools.setuptools]\n  data-files`\
+      \ (if using `pyproject.toml`) instead.\n\n- The `[files] scripts` option has\
+      \ been deprecated. There is no direct\n  replacement. Instead, migrate to using\
+      \ the `console_scripts` entrypoint\n  and use the `[options.entry_points]` option\
+      \ (if using `setup.cfg`) or\n  the `[project.scripts]` option (if using `pyproject.toml`).\n\
+      \n- The `[files] modules` option has been deprecated in favour of the\n  `[options]\
+      \ py_modules` option (if using `setup.cfg`) or the\n  `[tools.setuptools] py-modules`\
+      \ option (if using `pyproject.toml`)\n\n- The `[metadata] home_page` option\
+      \ has been deprecated in favour of the\n  `[metadata] url` option (if using\
+      \ `setup.cfg`) or the `[project.urls]`\n  option (if using `pyproject.toml`)\n\
+      \n- The `[metadata] summary` option has been deprecated in favour of the\n \
+      \ `[metadata] description` option (if using `setup.cfg`) or the `[project]\n\
+      \  description` option (if using `pyproject.toml`)\n\n- The `[metadata] classifier`\
+      \ option has been deprecated in favour of the\n  `[metadata] classifiers` option\
+      \ (if using `setup.cfg`) or the `[project]\n  classifiers` option (if using\
+      \ `pyproject.toml`)\n\n- The `[metadata] platform` option has been deprecated\
+      \ in favour of the\n  `[metadata] platforms` option (if using `setup.cfg`) or\
+      \ the\n  `[tool.setuptools] platforms` (if using `pyproject.toml`)\n\n- The\
+      \ `[metadata] requires_dist` option has been deprecated in favour of\n  the\
+      \ `[options] install_requires` option (if using `setup.cfg`) or the\n  `[project]\
+      \ dependencies` option (if using `pyproject.toml`)\n\n- The `[metadata] setup_requires_dist`\
+      \ option has been deprecated in favour\n  of the `[options] setup_requires`\
+      \ option (if using `setup.cfg`) or the\n  `[build-system] requires` option (if\
+      \ using `pyproject.toml`)\n\n- The `[metadata] python_requires` option has been\
+      \ deprecated in favour of\n  the `[options] python_requires` option (if using\
+      \ `setup.cfg`) or the\n  `[project] requires-python` option (if using `pyproject.toml`)\n\
+      \n- The `[metadata] requires_python` option has been deprecated in favour of\n\
+      \  the `[options] python_requires` option (if using `setup.cfg`) or the\n  `[project]\
+      \ requires-python` option (if using `pyproject.toml`)\n\n- The `[metadata] provides_dist`\
+      \ option has been deprecated as it is\n  obsolete and is no longer used by pip\n\
+      \n- The `[metadata] provides_extra` option has been deprecated as it is\n  obsolete\
+      \ and is no longer used by pip\n\n- The `[metadata] obsoletes_dist` option has\
+      \ been deprecated as it is\n  obsolete and is no longer used by pip\n\n- The\
+      \ `[backwards_compat] zip_safe` option has been deprecated as it is\n  was only\
+      \ relevant in the context of eggs and is therefore obsolete\n\n- The `[backwards_compat]\
+      \ dependency_links` option has been deprecated as\n  it is obsolete and is no\
+      \ longer used by pip\n\n- The `[backwards_compat] tests_require` option has\
+      \ been deprecated as it\n  is obsolete and is no longer used by pip\n\n- The\
+      \ `[backwards_compat] include_package_data` option has been deprecated\n  in\
+      \ favour of the `[options] include_package_data` option (is using\n  `setup.cfg`)\
+      \ or the `[tools.setuptools] include-package-data` option\n  (if using `pyproject.toml`)\n"
+  releasenotes/notes/support-vcs-uris-with-subdirectories-20ad68b6138f72ca.yaml:
+    features:
+    - "Subdirectories can now be included when specfifying a requirement in\n``requirements.txt``\
+      \ or ``test-requirements.txt`` using VCS URIs. For\nexample:\n\n    -e git+https://foo.com/zipball#egg=bar&subdirectory=baz\n\
+      \nFor more information, refer to the `pip documentation\n<https://pip.pypa.io/en/latest/reference/pip_install/#vcs-support>`__.\n"
+  releasenotes/notes/test-command-removal-153fc9ecdd6834ef.yaml:
+    upgrade:
+    - 'The deprecated support for ``setup.py test`` has been removed.
+
+      This feature has been deprecated since version 4.0. The two test tools
+
+      supported, ``nose`` and ``testr``, are no longer maintained, and the
+
+      general concept of distutils commands is itself deprecated.
+
+      Users should switch to running the test runners directly and ideally
+
+      migrate to an alternative, supported test runner like ``stestr`` or
+
+      ``pytest``.
+
+      '
+  releasenotes/notes/use_2to3-removal-ac48bf9fbfa049b1.yaml:
+    other:
+    - 'The 2to3 conversion utility has been long discouraged in favor of writing
+
+      multi-version-capable scripts. As of Setuptools 46.2.0 it''s deprecated and
+
+      slated for removal from the Python 3.10 standard library. Projects which
+
+      still need it are encouraged to perform conversion prior to packaging. See
+
+      https://bugs.python.org/issue40360 and
+
+      https://github.com/pypa/setuptools/issues/2086 for more details.
+
+      '
+  releasenotes/notes/v_version-457b38c8679c5868.yaml:
+    features:
+    - 'Support version parsing of git tag with the ``v<semver>`` pattern
+
+      (or ``V<semver>``), in addition to ``<semver>``.
+
+      '
+notes:
+- files:
+  - - releasenotes/notes/global-compilers-removal-62b131e40de087ef.yaml
+    - !!binary |
+      NmRjYzE1YTFjZTk2MTNiMzVlMzU2MjNhZGViNzk4ZGE4YTM4YjAwZg==
+  - - releasenotes/notes/setuptools-alignment-b5b1309f47e9cf98.yaml
+    - !!binary |
+      OGYxYTZlYzQyNTRkMDA1NTE4YjQ3ZWRjNjJlMjkxNmM0ZTNkMmE1Nw==
+  - - releasenotes/notes/test-command-removal-153fc9ecdd6834ef.yaml
+    - !!binary |
+      YzQ0ZGMwNWJkZGQ5MGI1ODE2YzNhOTc3MTg1MjliMGIxZTViNDQ5YQ==
+  version: 7.0.0
+- files:
+  - - releasenotes/notes/build_sphinx_removal-de990a5c14a9e64d.yaml
+    - !!binary |
+      YTY5MDYxMDgxN2QzMDBiZGNkYThiYTNmNWM2YzQ5M2U1NDBjY2NlMQ==
+  version: 6.0.0
+- files:
+  - - releasenotes/notes/fix-symbols-leading-spaces-f68928d75a8f0997.yaml
+    - !!binary |
+      MGFlY2JlYTgxYmNmODEzNGJjNzZjMTdkNGJjNDgxYTZmNTZlN2JiMg==
+  version: 5.11.0
+- files:
+  - - releasenotes/notes/fix-pep517-metadata-regression-bc287e60e45b2732.yaml
+    - !!binary |
+      NDA3ZDkyMTc1MTFkNzNiMzRiNDBkMzMwNTIwNDgwMzUzNzkwZWM5MA==
+  version: 5.8.1
+- files:
+  - - releasenotes/notes/pep517-support-89189ce0bab15845.yaml
+    - !!binary |
+      MDllZTE1MzQxMDE0ZmMwZTNiYjhhN2MzYjA2YTNmYTkxMmNmYWQzOA==
+  version: 5.7.0
+- files:
+  - - releasenotes/notes/use_2to3-removal-ac48bf9fbfa049b1.yaml
+    - !!binary |
+      MjQyZjdiZDFiNjg0MjhmYzIwYTlkN2YyMTlmNzBhMjEzNzJkZDVjOQ==
+  version: 5.5.1
+- files:
+  - - releasenotes/notes/bdist_wininst-removal-4a1c7c3a9f08238d.yaml
+    - !!binary |
+      ZTUyZTYwOGUzNTkzOGRhMjdkZDllYzcyMDllNGZhODU4ZWQ4YWRiNg==
+  version: 5.5.0
+- files:
+  - - releasenotes/notes/cmd-e6664dcbd42d3935.yaml
+    - !!binary |
+      YzcxNWRiNmRmOWQ0N2I1NmNkMzFhM2M2NWY5MzRkMWQyMjA1NjNiYg==
+  version: 5.4.0
+- files:
+  - - releasenotes/notes/fix-handling-of-spaces-in-data-files-glob-0fe0c398d70dfea8.yaml
+    - !!binary |
+      NTAzNTZkYTgzOTNhYmRiNDdjYzZjNjRkZTRmYTM4N2Q4NDk5Y2JjNA==
+  version: 5.2.1
+- files:
+  - - releasenotes/notes/fix-keywords-as-cfg-list-6cadc5141429d7f5.yaml
+    - !!binary |
+      NmZlN2Y2NTlkZTdkM2Y2MjM0OWM4NzIxMDYwZjEwNmMzOGU2MGRmYQ==
+  version: 5.2.0
+- files:
+  - - releasenotes/notes/fix-mapping-value-explode-with-equal-sign-41bf822fa4dd0e68.yaml
+    - !!binary |
+      ZTI4ZmM3ZTg3MDI4MjZhNTMyNWRiMzU0NzJhNTFmZWM1MDY4YWZmNw==
+  version: 5.1.3
+- files:
+  - - releasenotes/notes/fix-global-replace-of-src-prefix-in-glob-eb850b94ca96993e.yaml
+    - !!binary |
+      YTliMzExMTNiNzZiZGUzZGViYzY5NmMxY2U3MWFhN2RkNTk0ZmFhMw==
+  - - releasenotes/notes/ignore-find-links-07cf54f465aa33a6.yaml
+    - !!binary |
+      YmM0MTkzYjE4M2JiNThjNTZjYjNiNDZjMDRiNzYzYWViYmEwOWM1NA==
+  version: 5.1.2
+- files:
+  - - releasenotes/notes/long-descr-content-type-f9a1003acbb8740f.yaml
+    - !!binary |
+      NzdlNzVlMjVlMzgzZmI4MzE5YmU3YjQ2ZWNhM2QxZDEwMTM2YmMyMg==
+  version: 5.0.0
+- files:
+  - - releasenotes/notes/support-vcs-uris-with-subdirectories-20ad68b6138f72ca.yaml
+    - !!binary |
+      ZDAxYWJjODJkMDgxYzk4NzQ4ZmY5NWQ3YmI0N2FiZDljMWZmNjc4Yw==
+  version: 4.3.0
+- files:
+  - - releasenotes/notes/deprecate-pyN-requirements-364655c38fa5b780.yaml
+    - !!binary |
+      OWJlMTgxZThlNjBjYzQxZjNhZDY4NWUyMzZiMGM0Y2RjMjlkYmQzYw==
+  - - releasenotes/notes/deprecate-testr-nose-integration-56e3e11248d946fc.yaml
+    - !!binary |
+      MTEzNjg1ZTFiOTRkZjlkZDI5NDVhZGJkZGE3NTdhNTQ1YjA5NTk4Yw==
+  - - releasenotes/notes/remove-command-hooks-907d9c2325f306ca.yaml
+    - !!binary |
+      MzJjOTBiYTU5OGQ3NzQwZTUyYmYyMWJjNWU5MjBmYjVkZjA4NjQ1YQ==
+  - - releasenotes/notes/v_version-457b38c8679c5868.yaml
+    - !!binary |
+      NGM3NzVlNzg5MGU5MGZjMmVhNzdjNjYwMjA2NTllNTJkNmE2MTQxNA==
+  version: 4.0.0
